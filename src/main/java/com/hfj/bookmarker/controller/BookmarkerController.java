@@ -27,18 +27,18 @@ public class BookmarkerController {
 		return bookmarkerRepository.findAll();
 	}
 
-	@PostMapping("/book-marker")
+	@PostMapping("/bookmarker")
 	public Bookmarker createBookmarker(@Valid @RequestBody Bookmarker bookmarker) {
 		return bookmarkerRepository.save(bookmarker);
 	}
 
-	@GetMapping("/book-marker/{id}")
+	@GetMapping("/bookmarker/{id}")
 	public Bookmarker getBookmarkerById(@PathVariable(value = "id") Long bookmarkerId) {
 		return bookmarkerRepository.findById(bookmarkerId)
 				.orElseThrow(() -> new ResourceNotFoundException("bookmarker", "id", bookmarkerId));
 	}
 
-	@PutMapping("/book-markers/{id}")
+	@PutMapping("/bookmarkers/{id}")
 	public Bookmarker updateBookmarker(@PathVariable(value = "id") Long bookmarkerId,
 			@Valid @RequestBody Bookmarker bookmarkerDetails) {
 
@@ -52,7 +52,7 @@ public class BookmarkerController {
 		return updatedBookmarker;
 	}
 
-	@DeleteMapping("/book-markers/{id}")
+	@DeleteMapping("/bookmarkers/{id}")
 	public ResponseEntity<?> deleteBookmarker(@PathVariable(value = "id") Long bookmarkerId) {
 		Bookmarker bookmarker = bookmarkerRepository.findById(bookmarkerId)
 				.orElseThrow(() -> new ResourceNotFoundException("bookmarker", "id", bookmarkerId));
