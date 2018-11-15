@@ -1,4 +1,4 @@
-##Spring web service of a CRUD of bookmarker using Spring JPA, Spring MVC and Spring Boot, including GET, PUT, POST and DELETE operations for a bookmarker entity.
+## Spring web service of a CRUD of bookmarker using Spring JPA, Spring MVC and Spring Boot, including GET, PUT, POST and DELETE operations for a bookmarker entity.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ mysql> create database book_marker;
 
 The app will start running at http://localhost:8080.
 
-##Explore Rest APIs
+## Explore Rest APIs
 
 The app defines following CRUD APIs.
 
